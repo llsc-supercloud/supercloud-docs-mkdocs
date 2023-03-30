@@ -1,4 +1,4 @@
-Systems and Software {#systems_and_software}
+Systems and Software
 ====================
 
 This page lists information about the system and available
@@ -13,46 +13,32 @@ us](https://supercloud.mit.edu/contact).
 MGHPCC TX-E1 Specifications
 ---------------------------
 
-  -------------------------------
-  Summary               
-  --------------------- ---------
-  Number of Nodes       704
 
-  Total CPU Cores       32000
+| Summary            |        |
+|--------------------| -------|
+|Number of Nodes     |   704  |
+|Total CPU Cores     |  32000 |
+|Total GPUs          |  448   |
+|Distributed Storage |  873 TB|
 
-  Total GPUs            448
 
-  Distributed Storage   873 TB
-  -------------------------------
 
-  -------------------------------------------------------------------------------------
-  Individual   s                                                               
-  Node                                                                         
-  ------------ ------- ------- ------- ---------- --------- ------ ----------- --------
-  Processor    Nodes   CPU     Node    RAM/core   GPU Type  GPU    GPUs/node   Local
-                       Cores   RAM                          RAM                Disk
+### Individual Nodes
 
-  Intel Xeon   480     48      192 GB  4 GB       NA        NA     NA          4.4 TB
-  Platinum                                                                     
-  8260                                                                         
+|  Processor  | Nodes |  CPU Cores | Node RAM | RAM/core | GPU Type|  GPU RAM | GPUs/node |  Local Disk |
+| ------------|-------|-------|-------|----------|---------|------|-----------|--------|
+|Intel Xeon <br>  Platinum 8260| 480   |  48   |   192 GB | 4 GB   |    NA  |    NA    | NA     |     4.4 TB|
+|Intel Xeon <br> Gold 6248    | 224   |  40   |   384 GB | 9 GB   |  NVidia<br>Volta V100 |  32 GB | 2       |    3.8 TB
 
-  Intel Xeon   224     40      384 GB  9 GB       NVidia    32 GB  2           3.8 TB
-  Gold 6248                                       Volta                        
-                                                  V100                         
-  -------------------------------------------------------------------------------------
 
-  ----------------------------------------------------------
-  Resource Alloca tions                        
-  --------------- --------------- ------------ -------------
-  Processor       Partition       Starting     Standard
 
-  Intel Xeon      xeon-p8         2 Nodes (96  16 Nodes (768
-  Platinum 8260                   Cores)       Cores)
+### Resource Allocations
 
-  Intel Xeon Gold xeon-g6-volta   1 Node (40   6 Nodes (240
-  6248                            Cores 2      Cores 12
-                                  GPUs)        GPUs)
-  ----------------------------------------------------------
+|  Processor    |   Partition    |   Starting   |  Standard|
+|  --------------- |---------------| ------------ |-------------|
+|  Intel Xeon <br> Platinum 8260  |  xeon-p8      |   2 Nodes<br>(96 Cores)      | 16 Nodes<br>(768 Cores)|
+ | Intel Xeon <br> Gold 6248  |  xeon-g6-volta |  1 Node<br>(40 Cores 2 GPUs)|  4 Nodes<br>(160 cores, 8 GPUs)|
+
 
 Available Languages
 -------------------
