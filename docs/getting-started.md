@@ -1,5 +1,5 @@
 Getting Started
-==============
+===============
 
 This page contains the most common steps for setting up and getting
 started with your SuperCloud account. We provide this page as a

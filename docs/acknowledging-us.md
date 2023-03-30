@@ -1,4 +1,4 @@
-Acknowledging Us {#acknowledging_us}
+Acknowledging Us
 ================
 
 The canonical article about the MIT Supercloud is:

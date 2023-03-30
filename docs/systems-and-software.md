@@ -2,12 +2,12 @@ Systems and Software {#systems_and_software}
 ====================
 
 This page lists information about the system and available
-`software <#software>`{.interpreted-text role="ref"},
-`languages <#languages>`{.interpreted-text role="ref"},
-`compilers <#compilers>`{.interpreted-text role="ref"},
-`modules <#avail-modules>`{.interpreted-text role="ref"}, etc. This is
+[software](#software),
+[languages](#available-languages),
+[compilers](#compilers),
+[modules](#modules), etc. This is
 only a partial list, so if there is anything you are interested in that
-isn\'t listed here, please [contact
+isn't listed here, please [contact
 us](https://supercloud.mit.edu/contact).
 
 MGHPCC TX-E1 Specifications
@@ -54,62 +54,62 @@ MGHPCC TX-E1 Specifications
                                   GPUs)        GPUs)
   ----------------------------------------------------------
 
-Available Languages {##languages}
+Available Languages
 -------------------
 
--   Julia
--   Python (Anaconda available through modules)
--   Matlab(R)/Octave
--   R
--   C/C++
--   Fortran
--   Java
--   Perl 5
--   Ruby
+- Julia
+- Python (Anaconda available through modules)
+- Matlab(R)/Octave
+- R
+- C/C++
+- Fortran
+- Java
+- Perl 5
+- Ruby
 
-Modules {##avail-modules}
+Modules
 -------
 
 To see the most up-to-date list of currently available modules, run the
 command `module avail`. For more information about modules, see the
-`module section <#modules>`{.interpreted-text role="ref"} on the
+[module section](using-the-system/software-packages.md#modules) on the
 Software and Package Management page.
 
-Software {##software}
+Software
 --------
 
 ### Machine Learning Tools
 
--   Tensorflow
--   Pytorch
+- Tensorflow
+- Pytorch
 
 ### Big Data Software Stack
 
--   Hadoop
--   Zookeeper
--   Accumulo
+- Hadoop
+- Zookeeper
+- Accumulo
 
 ### Middleware Software Stack
 
--   ARPACK
--   ATLAS
--   Boost
--   BLAS
--   FFTW
--   LAPAC
--   OpenMPI
--   OpenBLAS
+- ARPACK
+- ATLAS
+- Boost
+- BLAS
+- FFTW
+- LAPAC
+- OpenMPI
+- OpenBLAS
 
 ### Lincoln Laboratory Developed Software
 
--   [pMatlab](https://www.ll.mit.edu/research-and-development/cyber-security-and-information-sciences/pmatlab)
--   [D4M](http://www.mit.edu/~kepner/D4M/)
--   [Graphulo](http://graphulo.mit.edu/)
--   LLMapReduce
+- [pMatlab](https://www.ll.mit.edu/research-and-development/cyber-security-and-information-sciences/pmatlab)
+- [D4M](http://www.mit.edu/~kepner/D4M/)
+- [Graphulo](http://graphulo.mit.edu/)
+- LLMapReduce
 
-### Compilers {##compilers}
+### Compilers
 
--   gcc
--   g++
--   gfortran
--   icc
+- gcc
+- g++
+- gfortran
+- icc

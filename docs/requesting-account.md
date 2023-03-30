@@ -59,8 +59,8 @@ The account request, approval, and creation process is:
     3. Describes how to scale up efficiently and measure your
         performance.
 
-The account creation process is manual and can take approximately \**two
-weeks*\*. You can make this process smoother by making sure you have
+The account creation process is manual and can take approximately **two
+weeks**. You can make this process smoother by making sure you have
 fully filled out your request form before submitting it and making sure
 your advisor has sent us an email confirmation. While you are waiting
 for your account you can get a head start learning how to use the
@@ -75,7 +75,7 @@ available, we ask for any agreements or requirements you have for your
 data to make sure Supercloud is the right place to be putting the data.
 Please be as detailed as you can. To get a general idea of the sorts of
 data that may or may not be appropriate for Supercloud, take a look at
-[MIT IS&T\'s guidance for storing data in Dropbox, OneDrive, and Google
+[MIT IS&T's guidance for storing data in Dropbox, OneDrive, and Google
 Drive
 here](http://kb.mit.edu/confluence/pages/viewpage.action?pageId=152598887).
 
@@ -87,8 +87,8 @@ keys, please contact the team at <supercloud@mit.edu>. To access the
 system you will need ssh keys. For additional security you can create a
 passphrase when you generate your key, which you must enter every time
 you log in. Since you set this yourself on your own computer, we cannot
-help you reset it if you forget it. If you can\'t remember your
-passphrase you\'ll have to generate a new key and re-add it using the
+help you reset it if you forget it. If you can't remember your
+passphrase you'll have to generate a new key and re-add it using the
 Web Portal.
 
 If you cannot generate ssh keys on your system, let us know and we can
@@ -101,7 +101,7 @@ command prompt. If the command prompt does not recognize the ssh-keygen
 command, you can install OpenSSH by [following the instructions on this
 page](https://linoxide.com/how-use-ssh-commands-windows-10-command-prompt/).
 If your Windows operating system is older than Windows 10, see the note
-`below <#pre-windows10>`{.interpreted-text role="ref"}.
+[below](#pre-windows-10).
 
 If you already have ssh keys then you can use those. You will need your
 public key, `id_rsa.pub.`
@@ -114,12 +114,32 @@ You will see the following:
 
 When answering the 3 prompts (first 3 lines) hit return to create
 passwordless keys and save them in the default location. Alternatively,
-for extra security you can create a passphrase for your key that you\'ll
+for extra security you can create a passphrase for your key that you'll
 have to enter every time you log in. To do this, instead of pressing
-\"enter\" or \"return\", enter the passphrase you\'ve chosen when
+"enter" or "return", enter the passphrase you've chosen when
 prompted.
 
-`Enter file in which to save the key (/home/user1234/.ssh/id_rsa):   Enter passphrase (empty for no passphrase):   Enter same passphrase again:   Your identification has been saved in /home/user1234/.ssh/id_rsa.   Your public key has been saved in /home/user1234/.ssh/id_rsa.pub.   The key fingerprint is:   88:90:6a:dc:f1:bd:ed:fb:b1:aa:46:14:34:5e:b9:70 user1234@yourMachine   The key's randomart image is:   +--[ RSA 2048]----+   |      .o ..      |   |   .  .ooE       |   |  o.   .+ .      |   |....o..o .       |   |.o ...o.S        |   |.      .o        |   |      .. . .     |   |       ..   o    |   |      ...++o     |   +—————------------+`
+```
+Enter file in which to save the key (/home/user1234/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/user1234/.ssh/id_rsa.
+Your public key has been saved in /home/user1234/.ssh/id_rsa.pub.
+The key fingerprint is:
+88:90:6a:dc:f1:bd:ed:fb:b1:aa:46:14:34:5e:b9:70 user1234@yourMachine
+The key's randomart image is:
++--[ RSA 2048]----+
+|      .o ..      |
+|   .  .ooE       |
+|  o.   .+ .      |
+|....o..o .       |
+|.o ...o.S        |
+|.      .o        |
+|      .. . .     |
+|       ..   o    |
+|      ...++o     |
++—————------------+`
+```
 
 To view your public ssh key, go to your .ssh directory.
 
@@ -134,7 +154,10 @@ This is the `id_rsa.pub` file content after generating a public SSH
 key that we would require. To view it, type `cat id_rsa.pub` at the
 command line.
 
-`[user1234@yourMachine]$ cat id_rsa.pub   ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA1NAD8v4nFzQ6G7KIEzkDLOnlH7t/4zmw0vVXlJjjFW4kLBgLJa0tkk61jHCxO2CurDr4zdEs2NeHG9agZJgMKMJZdIVaxtPcEBVVaNutvn/ZDRe3VsrRjToKEoR0xlAUdoef++AwiwI6K6vBOGIq6whLIlY5L9tZJfaLF3xMwmQRRhf4C+al/yZ5hX7BfGba2fqZmugTPpeSbLnFMVPKK/wy6XZasBSAKgLBA141EMXIKuGrpXpxLMECPBN5GDd/xmjmD0pC2o2z5OdfdYJj/FRWL2sC8hWTZSPa4p/n7Qc9ErFW5wM7FkynwguN4t/A+QOCa+p8C/nrOcTQKugrtw user1234@yourMachine`
+```bash
+[user1234@yourMachine]$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA1NAD8v4nFzQ6G7KIEzkDLOnlH7t/4zmw0vVXlJjjFW4kLBgLJa0tkk61jHCxO2CurDr4zdEs2NeHG9agZJgMKMJZdIVaxtPcEBVVaNutvn/ZDRe3VsrRjToKEoR0xlAUdoef++AwiwI6K6vBOGIq6whLIlY5L9tZJfaLF3xMwmQRRhf4C+al/yZ5hX7BfGba2fqZmugTPpeSbLnFMVPKK/wy6XZasBSAKgLBA141EMXIKuGrpXpxLMECPBN5GDd/xmjmD0pC2o2z5OdfdYJj/FRWL2sC8hWTZSPa4p/n7Qc9ErFW5wM7FkynwguN4t/A+QOCa+p8C/nrOcTQKugrtw user1234@yourMachine
+```
 
 Copy the entire output, including the ssh-rsa at the beginning.
 
@@ -144,37 +167,37 @@ Adding your SSH Keys to your Account
 Once you have created your ssh keys and copied your public key, you can
 add your key to your account using the Web Portal:
 
-1.  Go to <https://txe1-portal.mit.edu>.
-2.  Log in. If you are an MIT affiliate or an affiliate at another
+1. Go to <https://txe1-portal.mit.edu>.
+2. Log in. If you are an MIT affiliate or an affiliate at another
     university or institution you can log in with your MIT or
     institutional credentials. Click on MIT Touchstone/InCommon.
-    a.  Select your institution (note these are spelled out, MIT is
+    1. Select your institution (note these are spelled out, MIT is
         listed as Massachusetts Institute of Technology, for example).
-    b.  Click the checkbox next to \"Remember my Choice\" and click the
-        \"Select\" button.
-    c.  Log in with your institutional credentials.
-3.  Click on the \"sshkeys\" link.
-4.  Paste your public ssh key in the box at the bottom of the page,
-    click \"Update Keys\".
-5.  Verify you can log in by running `ssh USERNAME@txe1-login.mit.edu`
+    2. Click the checkbox next to "Remember my Choice" and click the
+        "Select" button.
+    3. Log in with your institutional credentials.
+3. Click on the "sshkeys" link.
+4. Paste your public ssh key in the box at the bottom of the page,
+    click "Update Keys".
+5. Verify you can log in by running `ssh USERNAME@txe1-login.mit.edu`
     in the terminal where you created your ssh keys, where `USERNAME` is
     the username we sent you in your new account email.
 
-::: {##pre-windows10}
+## Pre-Windows 10
+
 **NOTE:** For other Windows users there are a number of ssh clients you
 can use. Some ssh clients like Moba Xterm and Cygwin give you a
 Linux-like environment, and so once you start the program (which should
 look include a command line window), you can follow the instructions for
-creating an ssh key in `above <ssh_keys>`{.interpreted-text role="ref"}
+creating an ssh key in [above](#generating-ssh-keys)
 once you install the client.
-:::
 
 To install Moba Xterm, follow the instructions
 [here](https://www.poftut.com/mobaxterm-installation-and-usage-for-windows-personal-edition/)
-through the section \"Create Local Shell\". Anytime you are instructed
+through the section "Create Local Shell". Anytime you are instructed
 to open a terminal window, you can follow the instructions to create a
 local shell. Once you have installed, follow the instructions
-`above <#ssh-keys>`{.interpreted-text role="ref"} for creating an ssh
+[above](#generating-ssh-keys) for creating an ssh
 key.
 
 Instructions for installing PuTTY
@@ -183,18 +206,18 @@ note, the link will open in a new window.) Once PuTTY is installed
 please follow the instructions at
 this [link](https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-windows) to
 manually generate your ssh-keys, only follow the instructions in the
-\"Generating an SSH Key\" section.
+"Generating an SSH Key" section.
 
 Current Approver List
 ---------------------
 
--   Boston University: Wayne Gilmore
--   Harvard: Scott Yockel
--   MIT: Jeremy Kepner, Vijay Gadepally, Chris Hill, Lauren Milechin
--   Lincoln Laboratory: Jeremy Kepner, Vijay Gadepally, Albert Reuther
--   Northeastern: David Kaeli
--   UMass Amherst: John Griffin
--   UMass Dartmouth: Geoffrey Cowles
--   UMass Lowell: Anne Maglia
--   UMass Medical: Paul Langlois
--   University of Rhode Island: Gaurav Khanna
+- Boston University: Wayne Gilmore
+- Harvard: Scott Yockel
+- MIT: Jeremy Kepner, Vijay Gadepally, Chris Hill, Lauren Milechin
+- Lincoln Laboratory: Jeremy Kepner, Vijay Gadepally, Albert Reuther
+- Northeastern: David Kaeli
+- UMass Amherst: John Griffin
+- UMass Dartmouth: Geoffrey Cowles
+- UMass Lowell: Anne Maglia
+- UMass Medical: Paul Langlois
+- University of Rhode Island: Gaurav Khanna

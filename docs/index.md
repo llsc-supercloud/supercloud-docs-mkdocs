@@ -1,2 +1,2 @@
-# Welcome to SuperCloud Docs
+# Home
 
