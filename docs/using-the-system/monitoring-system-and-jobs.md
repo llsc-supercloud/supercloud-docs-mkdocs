@@ -1,4 +1,4 @@
-Monitoring System and Job Status {#monitoring_system_and_jobs}
+Monitoring System and Job Status
 ================================
 
 The four actions you may take the most are checking system status and

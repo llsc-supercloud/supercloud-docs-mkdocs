@@ -56,16 +56,33 @@ process/task ID and the number of processes/tasks, and use those numbers
 to split up the thing you are iterating over. For example, I might have
 a list of filenames, `fnames`. In python I would add:
 
-```python
-# Grab the arguments that are passed in
-my_task_id = int(sys.argv[1])
-num_tasks = int(sys.argv[2])
+=== "Python"
 
-# Assign indices to this process/task
-my_fnames = fnames[my_task_id:len(fnames):num_tasks]
+    ```python
+    # Grab the arguments that are passed in
+    my_task_id = int(sys.argv[1])
+    num_tasks = int(sys.argv[2])
 
-for f in my_fnames: ...
-```
+    # Assign indices to this process/task
+    my_fnames = fnames[my_task_id:len(fnames):num_tasks]
+
+    for f in my_fnames: ...
+    ```
+
+=== "Julia"
+
+    ```julia
+    # Grab the arguments that are passed in
+    task_id = parse(Int,ARGS[1])
+    num_tasks = parse(Int,ARGS[2])
+
+    # Assign indices to this process/task
+    my_fnames = fnames[task_id+1:num_tasks:length(fnames)]
+
+    for f in my_fnames
+        ...
+    ```
+
 
 Notice that I am iterating over `my_fnames`, which is a subset of the
 full list of filenames determined by the task ID and number of tasks.

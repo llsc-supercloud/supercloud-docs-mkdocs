@@ -126,10 +126,11 @@ Once you have done this you can start up Julia and install packages as
 you normally would. Once you are done it is good practice to delete
 these temporary files.
 
-**Note:** If you are using Jupyter there is an additional step you can
-optionally do so that Jupyter can find both our installed packages and
-your own. You can also run this if you are missing a Julia Kernel. First
-load a Julia module. Then, in a Julia shell, run:
+!!! note
+    If you are using Jupyter there is an additional step you can
+    optionally do so that Jupyter can find both our installed packages and
+    your own. You can also run this if you are missing a Julia Kernel. First
+    load a Julia module. Then, in a Julia shell, run:
 
 ```julia
 using IJulia

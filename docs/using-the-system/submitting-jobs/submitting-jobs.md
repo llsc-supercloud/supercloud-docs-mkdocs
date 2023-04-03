@@ -84,7 +84,7 @@ of those here. Note that these can (and often should) be combined.
 
 > `LLsub -i -s 20 -g volta:1`
 
-# Submitting a Simple Serial Batch Job
+## Submitting a Simple Serial Batch Job
 
 Submitting a batch job to the scheduler is the same for most languages.
 This starts by writing a submission script. This script should be a bash
@@ -100,7 +100,7 @@ running a python script) looks like this:
 #!/bin/bash
 
 # Loading the required module
-module load anaconda/2020a
+module load anaconda/2023a
 
 # Run the script
 python myScript.py
