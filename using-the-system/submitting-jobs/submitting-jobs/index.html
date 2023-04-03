@@ -1,0 +1,1954 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://supercloud.mit.edu/using-the-system/submitting-jobs/submitting-jobs/">
+      
+      
+        <link rel="prev" href="../../monitoring-system-and-jobs/">
+      
+      
+        <link rel="next" href="../job-array-triples/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>Submitting Jobs - SuperCloud Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#submitting-jobs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SuperCloud Docs" class="md-header__button md-logo" aria-label="SuperCloud Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SuperCloud Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Submitting Jobs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SuperCloud Docs" class="md-nav__button md-logo" aria-label="SuperCloud Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    SuperCloud Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../requesting-account/" class="md-nav__link">
+        Requesting an Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems-and-software/" class="md-nav__link">
+        Systems and Software
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../acknowledging-us/" class="md-nav__link">
+        Acknowledging Us
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Using the System
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Using the System
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+          Files and Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Files and Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files-and-data/transferring-files/" class="md-nav__link">
+        Transferring Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files-and-data/shared-groups/" class="md-nav__link">
+        Shared Groups
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          Installing Software
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing Software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-packages/" class="md-nav__link">
+        Software and Package Management
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+          Submitting Jobs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Submitting Jobs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring-system-and-jobs/" class="md-nav__link">
+        Monitoring System and Job Status
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Submitting Jobs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Submitting Jobs
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-start-an-interactive-job-with-llsub" class="md-nav__link">
+    How to start an Interactive Job with LLsub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-a-simple-serial-batch-job" class="md-nav__link">
+    Submitting a Simple Serial Batch Job
+  </a>
+  
+    <nav class="md-nav" aria-label="Submitting a Simple Serial Batch Job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-with-llsub" class="md-nav__link">
+    Submitting with LLsub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting-with-slurm-scheduler-commands" class="md-nav__link">
+    Submitting with Slurm Scheduler Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requesting-additional-resources-with-sbatch" class="md-nav__link">
+    Requesting Additional Resources with sbatch
+  </a>
+  
+    <nav class="md-nav" aria-label="Requesting Additional Resources with sbatch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-cores-on-multiple-nodes" class="md-nav__link">
+    Additional Cores on Multiple Nodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-cores-on-the-same-node" class="md-nav__link">
+    Additional Cores on the Same Node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-arrays" class="md-nav__link">
+    Job Arrays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclusive-nodes" class="md-nav__link">
+    Exclusive Nodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-more-memory-or-cores-per-task" class="md-nav__link">
+    Adding More Memory or Cores per Task
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requesting-gpus" class="md-nav__link">
+    Requesting GPUs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requesting-additional-resources-with-llsub" class="md-nav__link">
+    Requesting Additional Resources with LLsub
+  </a>
+  
+    <nav class="md-nav" aria-label="Requesting Additional Resources with LLsub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-cores-on-the-same-node-with-llsub" class="md-nav__link">
+    Additional Cores on the Same Node with LLsub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-array" class="md-nav__link">
+    Job Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-more-memory-or-cores" class="md-nav__link">
+    Adding More Memory or Cores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requesting-gpus-with-llsub" class="md-nav__link">
+    Requesting GPUs with LLsub
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llmapreduce" class="md-nav__link">
+    LLMapReduce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matlaboctave-tools" class="md-nav__link">
+    Matlab/Octave Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Matlab/Octave Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pmatlab" class="md-nav__link">
+    pMatlab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting-with-llsub-or-sbatch" class="md-nav__link">
+    Submitting with LLsub or Sbatch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launchfunctionongrid-and-launchparforongrid" class="md-nav__link">
+    LaunchFunctionOnGrid and LaunchParforOnGrid
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triples-mode" class="md-nav__link">
+    Triples Mode
+  </a>
+  
+    <nav class="md-nav" aria-label="Triples Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llsub" class="md-nav__link">
+    LLsub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llmapreduce-with-triples" class="md-nav__link">
+    LLMapReduce with Triples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pmatlab-with-triples" class="md-nav__link">
+    pMatlab with Triples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triples-mode-tuning" class="md-nav__link">
+    Triples Mode Tuning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job-array-triples/" class="md-nav__link">
+        Job Array Triples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+          Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best-practices/filesystem/" class="md-nav__link">
+        Best Practices for using the Filesystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best-practices/gpu-jobs/" class="md-nav__link">
+        Optimizing your GPU Jobs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+          Web Portal
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          Web Portal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-portal/" class="md-nav__link">
+        Logging In
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/" class="md-nav__link">
+        Databases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jupyter-notebooks/" class="md-nav__link">
+        Jupyter Notebooks
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faqs/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-help/" class="md-nav__link">
+        Getting Help
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        Glossary
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-start-an-interactive-job-with-llsub" class="md-nav__link">
+    How to start an Interactive Job with LLsub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-a-simple-serial-batch-job" class="md-nav__link">
+    Submitting a Simple Serial Batch Job
+  </a>
+  
+    <nav class="md-nav" aria-label="Submitting a Simple Serial Batch Job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-with-llsub" class="md-nav__link">
+    Submitting with LLsub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting-with-slurm-scheduler-commands" class="md-nav__link">
+    Submitting with Slurm Scheduler Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requesting-additional-resources-with-sbatch" class="md-nav__link">
+    Requesting Additional Resources with sbatch
+  </a>
+  
+    <nav class="md-nav" aria-label="Requesting Additional Resources with sbatch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-cores-on-multiple-nodes" class="md-nav__link">
+    Additional Cores on Multiple Nodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-cores-on-the-same-node" class="md-nav__link">
+    Additional Cores on the Same Node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-arrays" class="md-nav__link">
+    Job Arrays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclusive-nodes" class="md-nav__link">
+    Exclusive Nodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-more-memory-or-cores-per-task" class="md-nav__link">
+    Adding More Memory or Cores per Task
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requesting-gpus" class="md-nav__link">
+    Requesting GPUs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requesting-additional-resources-with-llsub" class="md-nav__link">
+    Requesting Additional Resources with LLsub
+  </a>
+  
+    <nav class="md-nav" aria-label="Requesting Additional Resources with LLsub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-cores-on-the-same-node-with-llsub" class="md-nav__link">
+    Additional Cores on the Same Node with LLsub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-array" class="md-nav__link">
+    Job Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-more-memory-or-cores" class="md-nav__link">
+    Adding More Memory or Cores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requesting-gpus-with-llsub" class="md-nav__link">
+    Requesting GPUs with LLsub
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llmapreduce" class="md-nav__link">
+    LLMapReduce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matlaboctave-tools" class="md-nav__link">
+    Matlab/Octave Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Matlab/Octave Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pmatlab" class="md-nav__link">
+    pMatlab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting-with-llsub-or-sbatch" class="md-nav__link">
+    Submitting with LLsub or Sbatch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launchfunctionongrid-and-launchparforongrid" class="md-nav__link">
+    LaunchFunctionOnGrid and LaunchParforOnGrid
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triples-mode" class="md-nav__link">
+    Triples Mode
+  </a>
+  
+    <nav class="md-nav" aria-label="Triples Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llsub" class="md-nav__link">
+    LLsub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llmapreduce-with-triples" class="md-nav__link">
+    LLMapReduce with Triples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pmatlab-with-triples" class="md-nav__link">
+    pMatlab with Triples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triples-mode-tuning" class="md-nav__link">
+    Triples Mode Tuning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="submitting-jobs">Submitting Jobs</h1>
+<p>For most job types, there are two ways to start the job: using the
+commands provided by the scheduler, Slurm, or using wrapper command,
+LLsub, that we have provided. LLsub creates a scheduler command based on
+the arguments you feed it, and will output that command to show you what
+it is running. The scheduler commands may provide more flexibility, and
+the wrapper commands may be easier to use in some cases and are
+scheduler agnostic. We show some of the more commonly used options. More
+Slurm options can be seen on the Slurm
+<a href="http://slurm.schedmd.com/man_index.html">documentation</a> page, and more
+LLsub options can be seen by running <code>LLsub -h</code> at the command line.</p>
+<p>There are two main types of jobs that you can run: interactive and batch
+jobs. Interactive jobs allow you to run interactively on a compute node
+in a shell. Batch jobs, on the other hand, are for running a pre-written
+script or executable. Interactive jobs are mainly used for testing,
+debugging, and interactive data analysis. Batch jobs are the traditional
+jobs you see on an HPC system and should be used when you want to run a
+script that doesn't require that you interact with it.</p>
+<p>On this page we will go over:</p>
+<ul>
+<li><a href="./#how-to-start-an-interactive-job-with-llsub">How to start an Interactive Job with LLsub</a></li>
+<li><a href="./#submitting-a-simple-serial-batch-job">How to submit a Basic Serial job with LLsub and sbatch</a></li>
+<li><a href="./#requesting-additional-resources-with-sbatch">How to request more resources with sbatch</a></li>
+<li><a href="./#requesting-additional-resources-with-llsub-llsub">How to request more resources with LLsub</a></li>
+<li><a href="./#llmapreduce">How to submit an LLMapReduce Job</a></li>
+<li><a href="./#matlaboctave-tools">How to submit a job with pMatlab, sbatch, or LaunchFunctionOnGrid</a></li>
+<li><a href="./#triples-mode">How to get the most performance out of LLsub, LLMapReduce, and pMatlab using Triples Mode</a></li>
+</ul>
+<p>You can find examples of several job types in the <a href="https://github.com/llsc-supercloud/teaching-examples">Teaching
+Examples</a> github
+repository. They are also in the <code>bwedx</code>shared group directory and
+anyone with a Supercloud account can copy them to their home directory
+and use them as a starting point.</p>
+<h2 id="how-to-start-an-interactive-job-with-llsub">How to start an Interactive Job with LLsub</h2>
+<p>Interactive jobs allow you to run interactively on a compute node in a
+shell. Interactive jobs are mainly used for testing, debugging, and
+interactive data analysis.</p>
+<p>Starting an interactive job with LLsub is very simple. To request a
+single core, run at the command line:</p>
+<blockquote>
+<p><code>LLsub -i</code></p>
+</blockquote>
+<p>As mentioned earlier on this page, when you run an LLsub command,
+you'll see the Slurm command that is being run in the background when
+you submit the job. Once your interactive job has started, you'll see
+the command line prompt has changed. It'll say something like:</p>
+<blockquote>
+<p><code>USERNAME@d-14-13-1:~$</code></p>
+</blockquote>
+<p>Where <code>USERNAME</code> is your username, and <code>d-14-13-1</code> is the hostname of
+the machine you are on. This is how you know you are now on a compute
+node in an interactive job.</p>
+<p>By default you will be allocated a single CPU core. We have a number of
+options that allow you to request additional resources. You can always
+view these options and more by running <code>LLsub -h</code>. We'll go over a few
+of those here. Note that these can (and often should) be combined.</p>
+<ul>
+<li><strong>Full Exclusive Node:</strong> Add the word <code>full</code> to request an exclusive
+    node. No one else will be on the machine with you:</li>
+</ul>
+<blockquote>
+<p><code>LLsub -i full</code></p>
+</blockquote>
+<ul>
+<li><strong>A number of cores:</strong> Use the <code>-s</code> option to request a certain
+    number of CPU cores, or slots. Here, for example, we are requesting
+    4 cores:</li>
+</ul>
+<blockquote>
+<p><code>LLsub -i -s 4</code></p>
+</blockquote>
+<ul>
+<li><strong>GPUs:</strong> Use the <code>-g</code> option to request a GPU. You need to specify
+    the GPU type and the number of GPUs you want. You can request up to
+    the number of GPUs on a single node. Refer to the
+    <a href="../../../systems-and-software/">Systems and Software</a> page to see how
+    many GPUs are available per node. Remember you may want to also
+    allocate some number of CPUs in addition to your GPUs. To get 20
+    CPUs and 1 Volta GPU (half the resources on our Xeon-G6 nodes), you
+    would run:</li>
+</ul>
+<blockquote>
+<p><code>LLsub -i -s 20 -g volta:1</code></p>
+</blockquote>
+<h2 id="submitting-a-simple-serial-batch-job">Submitting a Simple Serial Batch Job</h2>
+<p>Submitting a batch job to the scheduler is the same for most languages.
+This starts by writing a submission script. This script should be a bash
+script (it should start with <code>#!/bin/bash</code>) and contain the command(s)
+you need to run your code from the command line. It can also contain
+scheduler flags at the beginning of the script, or load modules or set
+environment variables you need to run your code.</p>
+<p>A job submission script for a simple, serial, batch job (for example,
+running a python script) looks like this:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Loading the required module</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>module<span class="w"> </span>load<span class="w"> </span>anaconda/2023a
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Run the script</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>python<span class="w"> </span>myScript.py
+</span></code></pre></div>
+<p>The first line is the <code>#!/bin/bash</code> mentioned earlier. It looks like a
+comment, but it isn't. This tells the machine how to interpret the
+script, that it is a bash script. Lines 3 and 4 demonstrate how to load
+a module in a submission script. The final line of the script runs your
+code. This should be the command you use to run your code from the
+command line, including any input arguments. This example is running a
+python script, therefore we have <code>python myScript.py</code>.</p>
+<h3 id="submitting-with-llsub">Submitting with LLsub</h3>
+<p>To submit a simple batch job, you can use the LLsub command:</p>
+<blockquote>
+<p><code>LLsub myScript.sh</code></p>
+</blockquote>
+<p>Here <code>myScript.sh</code> can be a job submission script, or could be replaced
+by a compiled executable. The <code>LLsub</code> command, with no arguments,
+creates a scheduler command with some default options. If your
+submission script is <code>myScript.sh</code>, your output file will be
+<code>myScript.sh.log-%j</code>, where <code>%j</code> is a unique numeric identifier, the
+JobID for your job. The output file is where all the output for your job
+gets written. Anything that normally is written to the screen when you
+run your code, including any errors or print statements, will be printed
+to this file.</p>
+<p>When you run this command, the scheduler will find available resources
+to launch your job to. Then <code>myScript.sh</code> will run to completion, and
+the job will finish when the script is complete.</p>
+<h3 id="submitting-with-slurm-scheduler-commands">Submitting with Slurm Scheduler Commands</h3>
+<p>To submit a simple batch job with the same default behavior as LLsub
+above, you would run:</p>
+<blockquote>
+<p><code>sbatch -o myScript.sh.log-%j myScript.sh</code></p>
+</blockquote>
+<p>Here <code>myScript.sh</code> can be a job submission script, or could be replaced
+by a compiled executable. The <code>-o</code> flag states the name of the file
+where any output will be written, the <code>%j</code> portion indicates job ID. If
+you do not include this flag, any output will be written to
+<code>slurm-JOBID.out</code>, which may make it difficult differentiate between job
+outputs.</p>
+<p>You can also incorporate this flag into your job submission script by
+adding lines starting with <code>#SBATCH</code> followed by the flag right after
+the first <code>#!/bin/bash</code> line:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Slurm sbatch options</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">#SBATCH -o myScript.sh.log-%j</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Loading the required module(s)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>module<span class="w"> </span>load<span class="w"> </span>anaconda/2023a
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># Run the script</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>python<span class="w"> </span>myScript.py
+</span></code></pre></div>
+<p>Like <code>#!/bin/bash</code>, these lines starting with <code>#SBATCH</code> look like
+comments, but they are not. As you add more flags to specify what
+resources your job needs, it becomes easier to specify them in your
+submission script, rather than having to type them out at the command
+line. If you incorporate Slurm flags in your script like this, you can
+submit it by running:</p>
+<blockquote>
+<p><code>sbatch myScript.sh</code></p>
+</blockquote>
+<p>When you run these commands, the scheduler will find available resources
+to launch your job to. Then <code>myScript.sh</code> will run to completion, and
+the job will finish when the script is complete.</p>
+<p>Note that when you start adding additional resources you need to make a
+choice between using <code>LLsub</code> and <code>sbatch</code>. If you have <code>sbatch</code> options
+in your submission script and submit it with <code>LLsub</code>, <code>LLsub</code> will
+ignore any additional command line arguments you give it and use those
+described in the script.</p>
+<h2 id="requesting-additional-resources-with-sbatch">Requesting Additional Resources with sbatch</h2>
+<p>By default you will be allocated a single core for your job. This is
+fine for testing, but usually you'll want more than that. For example
+you may want:</p>
+<ul>
+<li><a href="./#additional-cores-on-multiple-nodes">Additional cores on multiple nodes (distributed)</a></li>
+<li><a href="#additional-cores-on-the-same-node">Additional cores on the same node (shared memory or threading)</a></li>
+<li><a href="#job-arrays">Multiple independent tasks (job array/throughput)</a></li>
+<li><a href="#exclusive-nodes">Exclusive node(s)</a></li>
+<li><a href="#adding-more-memory-or-cores-per-task">More memory or cores per process/task/worker</a></li>
+<li><a href="#requesting-gpus">GPUs</a></li>
+</ul>
+<p>Here we have listed and will go over some of the more common resource
+requests. Most of these you can combine to get what you want. We will
+show the lines that you would add to your submission script, but note
+that you can also include these options at the command line if you want.</p>
+<p>How do you know what you should request? An in-depth discussion on this
+is outside the scope of this documentation, but we can provide some
+basic guidance. Generally, parallel programs are either implemented to
+be distributed or not. Distributed programs can communicate across
+different nodes, and so can scale beyond a single node. Programs written
+with MPI, for example, would be distributed. Non-Distributed programs
+you may see referred to as shared memory or multithreaded. Python's
+multiprocessing package is a good example of a shared memory library.
+Whether your program is Distributed or Shared Memory dictates how you
+request additional cores: do they need to be all on the same node, or
+can they be on different nodes? You also want to think about what you
+are running: if you are running a series of identical independent tasks,
+say you are running the same code over a number of files or parameters,
+this is referred to as Throughput and can be run in parallel using a Job
+Array. (If you are iterating over files like this, and have some
+reduction step at the end, take a look at
+<a href="#llmapreduce">LLMapReduce</a>). Finally,
+you may want to think about whether your job could use more than the
+default amount of memory, or RAM, and whether it can make use of a GPU.</p>
+<h3 id="additional-cores-on-multiple-nodes">Additional Cores on Multiple Nodes</h3>
+<p>The flag to request a certain number of cores that can be on more than
+one node is <code>--ntasks</code>, or <code>-n</code> for short. A task is Slurm's
+terminology for an individual process or worker. For example, to request
+4 tasks you can add the following to your submission script:</p>
+<blockquote>
+<p><code>#SBATCH -n 4</code></p>
+</blockquote>
+<p>You can control how many nodes these tasks are split onto using the
+<code>--nodes</code>, or <code>-N</code>. Your tasks will be split evenly across the nodes you
+request. For example, if I were to have the following in my script:</p>
+<blockquote>
+<p><code>#SBATCH -n 4 #SBATCH -N 2</code></p>
+</blockquote>
+<p>I would have four tasks on two nodes, two tasks on each node. Specify
+the number of nodes like this does not ensure that you have exclusive
+access to those nodes. It will by default allocate one core for each
+task, so in this case you'd get a total of four cores, two on each
+node. If you need more than one core for each task, take a look at the
+<a href="#adding-more-memory-or-cores-per-task">cpus-per-task</a> option,
+and if you need exclusive access to those nodes see the
+<a href="#exclusive-nodes">exclusive</a> option.</p>
+<h3 id="additional-cores-on-the-same-node">Additional Cores on the Same Node</h3>
+<p>There are technically two ways to do this. You can use the same options
+as requesting tasks on multiple nodes and setting the number of Nodes to
+1, say we want four cores:</p>
+<blockquote>
+<p><code>#SBATCH -n 4 #SBATCH -N 1</code></p>
+</blockquote>
+<p>Or you can use <code>-c</code>, or the <code>--cpus-per-task</code> option by itself:</p>
+<blockquote>
+<p><code>#SBATCH -c 4</code></p>
+</blockquote>
+<p>As far as the number of cores you get, the result will be the same.
+You'll get the four cores on a single node. There is a bit of a nuance
+on how Slurm sees it. The first allocates four tasks all on one node.
+The second allocates a single task with four CPUs or cores. You don't
+need to worry too much about this, choose whichever makes the most sense
+to you.</p>
+<h3 id="job-arrays">Job Arrays</h3>
+<p><strong>NOTE:</strong> We encourage everyone who runs a job array to use LLsub with
+Triples mode. See the page <a href="../job-array-triples/">LLsub Job Array Triples</a> to see how to set this up.</p>
+<p>A simple way to run the same script or command with different parameters
+or on different files in parallel is by using a Job Array. With a Job
+Array, the parallelism happens at the Scheduler level and is completely
+language agnostic. The best way to use a Job Array is to batch up your
+parameters so you have a finite number of tasks each running a set of
+parameters, rather than one task for each parameter. In your submission
+script you specify numeric indices, corresponding to the number of tasks
+that you want running at once. Those indices, or Task IDs are captured
+in environment variables, along with the total number of tasks, and
+passed into your script. Your script then has the information it needs
+to split up the work among tasks. This process is described in the
+<a href="https://github.com/llsc-supercloud/teaching-examples">Teaching
+Examples</a> github
+repository, with examples in
+<a href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Julia/word_count/JobArray">Julia</a>
+and
+<a href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Python/word_count/JobArray">Python</a>.</p>
+<p>First you want to take a look at your code. Code that can be submitted
+as a Job Array usually has one big for loop. If you are iterating over
+multiple parameters or files, and have nested for loops, you'll first
+want to enumerate all the combinations of what you are iterating over so
+you have one big loop. Then you want to add a few lines to your code to
+take in two arguments, the Task ID and the number of tasks, use those
+numbers to split up the thing you are iterating over. For example, I
+might have a list of filenames, <code>fnames</code>. In python I would add:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Grab the arguments that are passed in</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">my_task_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">num_tasks</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="err">`</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Assign indices to this process/task</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">my_fnames</span> <span class="o">=</span> <span class="n">fnames</span><span class="p">[</span><span class="n">my_task_id</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">fnames</span><span class="p">):</span><span class="n">num_tasks</span><span class="p">]</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">my_fnames</span><span class="p">:</span> <span class="o">...</span>
+</span></code></pre></div>
+<p>Notice that I am iterating over <code>my_fnames</code>, which is a subset of the
+full list of filenames determined by the task ID and number of tasks.
+This subset will be different for each task in the array. Note that the
+third line of code will be different for languages with arrays that
+start at index 1 (see the <a href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Julia/word_count/JobArray">Julia Job
+Array</a>
+code for an example of this).</p>
+<p>The submission script will look like this:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">#SBATCH -o myScript.sh.log-%j-%a</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">#SBATCH -a 1-4</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># Loading the required module(s)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>module<span class="w"> </span>load<span class="w"> </span>anaconda/2023a
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>python<span class="w"> </span>top5each.py<span class="w"> </span><span class="nv">$SLURM_ARRAY_TASK_ID</span><span class="w"> </span><span class="nv">$SLURM_ARRAY_TASK_COUNT</span>
+</span></code></pre></div>
+<p>The <code>-a</code> (or <code>--array</code>) option is where you specify your array indices,
+or task IDs. Here I am creating an array with four tasks by specifying 1
+"through" 4. When the scheduler starts your job, it will start up four
+independent tasks, each will run this script, and each will have
+<code>#SLURM_ARRAY_TASK_ID</code> set to its task ID. Similarly,
+<code>$SLURM_ARRAY_TASK_COUNT</code> will be set to the total number of tasks, in
+this case 4.</p>
+<p>You may have noticed that there is an additional <code>%a</code> in the output file
+name. There will be one output file for each task in the array, and the
+<code>%a</code> puts the task ID on at the end of the filename, so you know which
+file goes with which task.</p>
+<p>By default you will get one core for each task in the array. If you need
+more than one core for each task, take a look at the
+<a href="#adding-more-memory-or-cores-per-task">cpus-per-task</a> option,
+and if you need to add a GPU to each task, check out the the
+<a href="#requesting-gpus">GPUs</a> section.</p>
+<h3 id="exclusive-nodes">Exclusive Nodes</h3>
+<p>Requesting an exclusive node ensures that there will be no other users
+on the node with you. You might want to do this when you know you need
+to make use of the full node, when you are running performance tests, or
+when you think your program might affect other users. There is some
+software that have not been designed for a shared HPC environment, and
+so use all the cores on the node, whether you have allocated them or
+not. You can look through their documentation to see if there is a way
+to limit the number of cores it uses, or you can request an exclusive
+node. Another situation where you might affect other users is when you
+don't yet know what resources your code requires. For these first few
+runs it makes sense to request an exclusive node, and then look at the
+resources that your job used, and request those resources in the future.</p>
+<p>To request an exclusive node or nodes, you can add the following option:</p>
+<blockquote>
+<p><code>#SBATCH --exclusive</code></p>
+</blockquote>
+<p>This will ensure that wherever the tasks in your job land, those nodes
+will be exclusive. If you have four tasks, for example, specified with
+either <code>-n</code> (<code>--ntasks</code>) or in a job array, and those four tasks fall on
+the same node, you will get that one node exclusively. It will not force
+each task onto its own exclusive node without adding other options.</p>
+<h3 id="adding-more-memory-or-cores-per-task">Adding More Memory or Cores per Task</h3>
+<p>You can ensure that each task has more than one core or the default
+amount of memory the same way. By default, each core gets its fair share
+of the RAM on the node, calculated by the total amount of memory on the
+node divided by the number of cores. See the
+<a href="../../../systems-and-software/">Systems and Software</a> page for a list of
+the amount of RAM, number of cores, and RAM per core for each resource
+type. For example, with the Xeon-P8 nodes, they have 192 GB of RAM and
+48 cores, so each core gets 4 GB of RAM. Therefore, the way to request
+more memory is to request more cores. Even if you are not using the
+additional core(s), you are using their memory. The way to do this is
+using the <code>--cpus-per-task</code>, or <code>-c</code> option. Say I know each task in my
+job will use about 20 GB of memory, with the Xeon-P8 nodes above, I'd
+want to request five cores for each task:</p>
+<blockquote>
+<p><code>#SBATCH -c 5</code></p>
+</blockquote>
+<p>This works nicely with both the <code>-n</code> (<code>--ntasks</code>) and <code>-a</code> (<code>--array</code>)
+options. As the flag name implies, you will get 5 cpu cores for every
+task in your job. If you are already using the <code>-c</code> option for a shared
+memory or threaded job, you can either use the <code>-n</code> and <code>-N 1</code>
+alternative and save <code>-c</code> for adding additional memory, or you can
+increase what you put for <code>-c</code>. For example, if I know I'm going to use
+4 cores in my code, but each will need 20 GB of RAM, I can request a
+total of 4*5 = 20 cores.</p>
+<p>How do you know how much memory your job needs? You can find out how
+much memory a job used after the job is completed. You can run your job
+long enough to get an idea of the memory requirement first in <a href="#exclusive-nodes">exclusive</a>
+ mode so your job can have access to
+the maximum amount of memory. Then you can use the <code>sacct</code> slurm command
+to get the memory used:</p>
+<blockquote>
+<p><code>sacct -j JOBID -o JobID,JobName,State,AllocCPUS,MaxRSS --units=G</code></p>
+</blockquote>
+<p>where JOBID is your job ID. State shows the job status, keep in mind
+that the memory numbers are only accurate for jobs that are no longer
+running, and AllocCPUS is the number of CPU cores that were allocated to
+the job. MaxRSS is the maximum resident memory (maximum memory
+footprint) used by each job.</p>
+<p>If the MaxRSS value is larger than the per-slot/core memory limit for
+the compute node (again, check the
+<a href="../../../systems-and-software/">Systems and Software</a> page to get this
+for the resource type you are requesting), you will have to request
+additional memory for your job.</p>
+<p>This formatting for the accounting data prints out a number of memory
+datapoints for the job. They are all described in the <a href="https://slurm.schedmd.com/sacct.html">sacct man
+page</a>.</p>
+<h3 id="requesting-gpus">Requesting GPUs</h3>
+<p>Some code can be accelerated by adding a GPU, or Graphical Processing
+Unit. GPUs are specialized hardware originally developed for rendering
+the graphics you see on your computer screen, but have been found to be
+very fast at doing certain operations and have therefore been adopted as
+an accelerator. They are frequently used in Machine Learning libraries,
+but are increasingly used in other software. You can also write your own
+GPU code using CUDA.</p>
+<p>Before requesting a GPU, you should verify that the software, libraries,
+or code that you are using can make use of a GPU, or multiple GPUs. The
+Machine Learning packages available in our anaconda modules should all
+be able to take advantage of GPUs. To request a single GPU, add the
+following line to your submission script:</p>
+<blockquote>
+<p><code>#SBATCH --gres=gpu:volta:1</code></p>
+</blockquote>
+<p>This flag will give you a single GPU. For multi-node jobs, it'll give
+you a single GPU for every node you end up on, and will give you a
+single GPU for every task in a Job Array. If your code can make use of
+multiple GPUs, you can set this to 2 instead of 1, and that will give
+you 2 GPUs for each node or Job Array task.</p>
+<p>Note that only certain operations are being done on the GPU, your job
+will still most likely run best given a number of CPU cores as well. If
+you are not sure how many to request, if you request 1 GPU, ask for 20
+CPUs (half of the CPUs), if you request 2 GPUs, you can ask for all of
+the CPUs. You can check the current CPU and GPU counts for each node on
+our <a href="../../../systems-and-software/">Systems and Software</a> page.</p>
+<h2 id="requesting-additional-resources-with-llsub">Requesting Additional Resources with LLsub</h2>
+<p>By default you will be allocated a single core for your job. This is
+fine for testing, but usually you'll want more than that. For example
+you may want:</p>
+<ul>
+<li><a href="#additional-cores-on-the-same-node-with-llsub">Additional cores on the same node (shared memory or threading)</a></li>
+<li><a href="../job-array-triples/">Multiple independent tasks (job array/throughput)</a></li>
+<li><a href="#adding-more-memory-or-cores">More memory or cores per process/task/worker</a></li>
+<li><a href="#requesting-gpus-with-llsub">GPUs</a></li>
+</ul>
+<p>Here we have listed and will go over some of the more common resource
+requests. Most of these you can combine to get what you want. We will
+show the lines that you would add to your submission script, but note
+that you can also include these options at the command line if you want.</p>
+<p>How do you know what you should request? An in-depth discussion on this
+is outside the scope of this documentation, but we can provide some
+basic guidance. Generally, parallel programs are either implemented to
+be distributed or not. Distributed programs can communicate across
+different nodes, and so can scale beyond a single node. Programs written
+with MPI, for example, would be distributed. Non-Distributed programs
+you may see referred to as shared memory or multithreaded. Python's
+multiprocessing package is a good example of a shared memory library.
+Whether your program is Distributed or Shared Memory dictates how you
+request additional cores: do they need to be all on the same node, or
+can they be on different nodes? You also want to think about what you
+are running: if you are running a series of identical independent tasks,
+say you are running the same code over a number of files or parameters,
+this is referred to as Throughput and can be run in parallel using a Job
+Array. (If you are iterating over files like this, and have some
+reduction step at the end, take a look at
+<a href="#llmapreduce">LLMapReduce</a>). Finally,
+you may want to think about whether your job could use more than the
+default amount of memory, or RAM, and whether it can make use of a GPU.</p>
+<p>If you are submitting your job with LLsub, you should be aware of its
+behavior. If you have any Slurm options in your submission script (any
+lines starting with <code>#SBATCH</code>) LLsub will ignore any command line
+arguments you give it and only use those you specify in your script. You
+can still submit this script with LLsub, but it won't add any extra
+command line arguments you pass it.</p>
+<h3 id="additional-cores-on-the-same-node-with-llsub">Additional Cores on the Same Node with LLsub</h3>
+<p>Libraries that use shared memory or threading to handle parallelism
+require that all cores be on the same node. In this case you are
+constrained to the number of cores on a single machine. Check the
+<a href="../../../systems-and-software/">Systems and Software</a> page to see the
+number of cores available on the current hardware.</p>
+<p>To request multiple cores on the same node for your job you can use the
+<code>-s</code> option in <code>LLsub</code>. This stands for "slots". For example, if I am
+running a job and I'd like to allocate 4 cores to it, I would run:</p>
+<blockquote>
+<p><code>LLsub myScript.sh -s 4</code></p>
+</blockquote>
+<h3 id="job-array">Job Array</h3>
+<p>See <a href="../job-array-triples/">LLsub Job Array Triples</a>.</p>
+<h3 id="adding-more-memory-or-cores">Adding More Memory or Cores</h3>
+<p>If you anticipate that your job will use more than ~4 GB of RAM, you
+may need to allocate more resources for your job. You can be sure your
+job has enough memory to run by allocating more slots, or cores, to each
+task or process in your job. Each core gets its fair share of the RAM on
+the node, calculated by the total amount of memory on the node divided
+by the number of cores. See the <a href="../../../systems-and-software/">Systems and Software</a>
+ page for a list of the amount of RAM, number of cores, and
+RAM per core for each resource type. For example, the Xeon-P8 nodes have
+192 GB of RAM and 48 cores, so each core gets 4 GB of RAM. Therefore,
+the way to request more memory is to request more cores. Even if you are
+not using the additional core(s), you are using their memory. The way to
+do with LLsub is the <code>-s</code> (for slots) option. Say I know each task in my
+job will use about 20 GB of memory, with the Xeon-P8 nodes above, I'd
+want to request five cores for each task:</p>
+<blockquote>
+<p><code>LLsub myScript.sh -s 5</code></p>
+</blockquote>
+<p>If you are already using the <code>-s</code> option for a shared memory or threaded
+job, you should increase what you put for <code>-s</code>. For example, if I know
+I'm going to use 4 cores in my code, but each will need 20 GB of RAM, I
+can request a total of 4*5 = 20 cores:</p>
+<blockquote>
+<p><code>LLsub myScript.sh -s 20</code></p>
+</blockquote>
+<p>How do you know how much memory your job needs? You can find out how
+much memory a job used after the job is completed. You can run your job
+long enough to get an idea of the memory requirement first (you can
+request the maximum number of cores per node for this step). Then you
+can use the <code>sacct</code> slurm command to get the memory used:</p>
+<blockquote>
+<p><code>sacct -j JOBID -oJobID,JobName,State,AllocCPUS,MaxRSS --units=G</code></p>
+</blockquote>
+<p>where JOBID is your job ID. State shows the job status, keep in mind
+that the memory numbers are only accurate for jobs that are no longer
+running, and AllocCPUS is the number of CPU cores that were allocated to
+the job. MaxRSS is the maximum resident memory (maximum memory
+footprint) used by each job.</p>
+<p>If the MaxRSS value is larger than the per-slot/core memory limit for
+the compute node (again, check the
+<a href="../../../systems-and-software/">Systems and Software</a> page to get this
+for the resource type you are requesting), you will have to request
+additional memory for your job.</p>
+<p>This formatting for the accounting data prints out a number of memory
+data points for the job. They are all described in the <a href="https://slurm.schedmd.com/sacct.html">sacct man
+page</a>.</p>
+<h3 id="requesting-gpus-with-llsub">Requesting GPUs with LLsub</h3>
+<p>Some code can be accelerated by adding a GPU, or Graphical Processing
+Unit. GPUs are specialized hardware originally developed for rendering
+the graphics you see on your computer screen, but have been found to be
+very fast at doing certain operations and have therefore been adopted as
+an accelerator. They are frequently used in Machine Learning libraries,
+but are increasingly used in other software. You can also write your own
+GPU code using CUDA.</p>
+<p>Before requesting a GPU, you should verify that the software, libraries,
+or code that you are using can make use of a GPU, or multiple GPUs. The
+Machine Learning packages available in our anaconda modules should all
+be able to take advantage of GPUs. To request a single GPU, use the
+following command:</p>
+<blockquote>
+<p><code>LLsub myScript.sh -g volta:1</code></p>
+</blockquote>
+<p>This flag will give you a single GPU. For multi-node jobs, it'll give
+you a single GPU for every node you end up on, and will give you a
+single GPU for every task in a Job Array. If your code can make use of
+multiple GPUs, you can set this to 2 instead of 1, and that will give
+you 2 GPUs for each node or Job Array task.</p>
+<p>Note that only certain operations are being done on the GPU, your job
+will still most likely run best given a number of CPU cores as well. If
+you are not sure how many to request, if you request 1 GPU, ask for 20
+CPUs (half of the CPUs), if you request 2 GPUs, you can ask for all of
+the CPUs. You can check the current CPU and GPU counts for each node on
+our <a href="../../../systems-and-software/">Systems and Software</a> page. To
+request 20 cores and 1 GPU, run:</p>
+<blockquote>
+<p><code>LLsub myScript.sh -s 20 -g volta:1</code></p>
+</blockquote>
+<h2 id="llmapreduce">LLMapReduce</h2>
+<p>The LLMapReduce command scans the user-specified input directory and
+translates each individual file as a computing task for the
+user-specified application. Then, the computing tasks will be submitted
+to scheduler for processing. If needed, the results can be
+post-processed by setting up a user-specified reduce task, which is
+dependent on the mapping task results. The reduce task will wait until
+all the results become available.</p>
+<p>You can view the most up-to-date options for the LLMapReduce command by
+running the command LLMapReduce -h. You can see examples of how to use
+LLMapReduce jobs in /usr/local/examples directory on the Supercloud
+system nodes. Some of these may be in the <code>examples</code> directory in your
+home directory. You can copy any that are missing from
+<code>/usr/local/examples</code> to your home directory. We also have an example in
+the <a href="https://github.com/llsc-supercloud/teaching-examples">Teaching
+Examples</a> github
+repository, with examples in
+<a href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Julia/word_count/LLMapReduce">Julia</a>
+and
+<a href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Python/word_count/LLMapReduce">Python</a>.
+These examples are also available in the bwedx shared group directory
+and can be copied to your home directory from there.</p>
+<p>LLMapReduce can work with any programs and we have a couple of examples
+for Java, Matlab, Julia, and Python. By default, it cleans up the
+temporary directory, <code>MAPRED.PID</code>. However, there is an option to keep
+(<code>--keep=true</code>) the temporary directory if you want it for debugging. The
+current version also supports a nested LLMapReduce call.</p>
+<h2 id="matlaboctave-tools">Matlab/Octave Tools</h2>
+<h3 id="pmatlab">pMatlab</h3>
+<p>pMatlab was created at MIT Lincoln Laboratory to provide easy access to
+parallel computing for engineers and scientists using the MATLAB(R)
+language. pMatlab provides the interfaces to the communication libraries
+necessary for distributed computation. In addition to MATLAB(R), pMatlab
+works seamlessly with Octave, and open source Matlab toolkit.</p>
+<p>MATLAB(R) is the primary development language used by Laboratory staff,
+and thus the place to start when developing an infrastructure aimed at
+removing the traditional hurdles associated with parallel computing. In
+an effort to develop a tool that will enable the researcher to
+seamlessly move from desktop (serial) to parallel computing, pMatlab has
+adopted the use of Global Array Semantics. Global Array Semantics is a
+parallel programming model in which the programmer views an array as a
+single global array rather than multiple subarrays located on different
+processors. The ability to access and manipulate related data
+distributed across processors as a single array more closely matches the
+serial programming model than the traditional parallel approach, which
+requires keeping track of which data resides on any given individual
+processor.</p>
+<p>Along with global array semantics, pMatlab uses the message-passing
+capabilities of MatlabMPI to provide a global array interface to
+MATLAB(R)) programmers. The ultimate goal of pMatlab is to move beyond
+basic messaging (and its inherent programming complexity) towards higher
+level parallel data structures and functions, allowing MATLAB(R)) users
+to parallelize their existing programs by simply changing and adding a
+few lines.</p>
+<p>Any pMatlab code can be run on the MIT Supercloud using standard pMatlab
+submission commands. The Practical High Performance Computing course on
+our online course platform provides a very good introduction for how to
+use pMatlab. There is also an examples directory in your home directory
+that provides several examples. The Param_Sweep example is a good place
+to start. There is an in-depth explanation of this example in the
+<a href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Matlab-Octave/Param_Sweep">Teaching
+Examples</a>
+github repository.</p>
+<p>If you anticipate that your job will use more than 4 GB of RAM, you may
+need to allocated more resources for your job. You can be sure your job
+has enough memory to run by allocating more slots, or cores, to each
+task or process in your job. For example, our xeon-p8 nodes have 48 cores and
+192 GB of RAM, therefore each core represents about 4 GB. So if your
+job needs ~8 GB, allocate two cores or slots per process. Doing so
+will ensure your job will not fail due running out of memory, and not
+interfere with someone else's job.</p>
+<p>To do this with pMatlab, you can add the following line to your run
+script, before you the <code>eval(pRUN(...))</code> command:</p>
+<blockquote>
+<p><code>setenv('GRIDMATLAB_MT_SLOTS','2')</code></p>
+</blockquote>
+<h3 id="submitting-with-llsub-or-sbatch">Submitting with LLsub or Sbatch</h3>
+<p>You can always submit a Matlab(R) script with a submission script
+through sbatch or LLsub. The basic submission script looks like this:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># Run the script</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>matlab<span class="w"> </span>-nodisplay<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;myScript; exit&quot;</span>
+</span></code></pre></div>
+<p>Where <code>myScript</code> is the name of the Matlab script that you want to run.
+When running a Matlab script through a submission script, you do need to
+specify that Matlab should exit after it runs your code. Otherwise it
+will continue to run, waiting for you to give it the next command.</p>
+<h3 id="launchfunctionongrid-and-launchparforongrid">LaunchFunctionOnGrid and LaunchParforOnGrid</h3>
+<p>If you want to launch your serial MATLAB scripts or functions on LLSC
+systems, you can use the <code>LaunchFunctionOnGrid()</code> function. You can
+execute your code without any modification (if it is written for a Linux
+environment) as a batch job. Its usage, in Matlab, is as follows:</p>
+<blockquote>
+<p><code>launch_status = LaunchFunctionOnGrid(m_file) launch_status = LaunchFunctionOnGrid(m_file,variables)</code></p>
+</blockquote>
+<p>Where <code>m_file</code> is a string that specifies the script or function to be
+run, and variables is the list of variables that are being passed in.
+Note that variables must be variables, not constants.</p>
+<p>If you want to launch your MATLAB scripts or functions that call the
+<code>parfor()</code> function on LLSC systems, you can use the
+<code>LaunchParforOnGrid()</code> function. You can execute your code without any
+modification (if it is written for a Linux environment) as a batch job.
+While <code>LaunchParforOnGrid()</code> will work functionally, it has significant
+limitations in performance, both at the node level and the cluster
+level; it might be better to use pMatlab instead. To use the
+<code>LaunchParforOnGrid()</code> function in MATLAB:</p>
+<blockquote>
+<p><code>launch_status = LaunchParforOnGrid(m_file) launch_status = LaunchParforOnGrid(m_file,variables)</code></p>
+</blockquote>
+<p>Where <code>m_file</code> is a string that specifies the script or function to be
+run, and variables is the list of variables that are being passed in.
+Note that variables must be variables, not constants.</p>
+<p>If you anticipate that your job will use more than 4 GB of RAM, you may
+need to allocated more resources for your job. You can be sure your job
+has enough memory to run by allocating more slots, or cores, to each
+task or process in your job. For example, our xeon-p8 nodes have 48 cores and
+192 GB of RAM, therefore each core represents about 4 GB. So if your
+job needs ~8 GB, allocate two cores or slots per process. Doing so
+will ensure your job will not fail due running out of memory, and not
+interfere with someone else's job.</p>
+<p>To do this with LaunchFunctionOnGrid or LaunchParforOnGrid, you can add
+the following line to your run script, before you use the
+<code>LaunchFunctionOnGrid()</code> or <code>LaunchParforOnGrid()</code> command:</p>
+<blockquote>
+<p><code>setenv('GRIDMATLAB_MT_SLOTS','2')</code></p>
+</blockquote>
+<h2 id="triples-mode">Triples Mode</h2>
+<p>Triples mode is a way to launch pMatlab,
+<a href="../job-array-triples/">LLsub Job Array</a>, and
+LLMapReduce jobs that gives you better performance and more flexibility
+to manage memory and threads. Unless you are requesting a small number
+of cores for your job, we highly encourage you to migrate to this model.</p>
+<p>With triples mode, you specify the resources for your job by providing 3
+parameters:</p>
+<blockquote>
+<p><code>[Nodes NPPN NTPP]</code></p>
+</blockquote>
+<p>where</p>
+<ul>
+<li><code>Nodes</code>is number of compute nodes</li>
+<li><code>NPPN</code>is number of processes per node</li>
+<li><code>NTPP</code>is number of threads per process (default is 1)</li>
+</ul>
+<p>With triples mode your job will have exclusive use of each of the nodes
+that you request.</p>
+<h3 id="llsub">LLsub</h3>
+<p>A brief introduction to LLsub is provided
+<a href="#requesting-additional-resources-with-llsub">above</a>. To use triples
+mode to launch LLsub job on Supercloud, run as follows:</p>
+<blockquote>
+<p><code>LLsub ./submit.sh [Nodes,NPPN,NTPP]</code></p>
+</blockquote>
+<p>A more in-depth guide on how to convert an existing Job Array to an
+LLsub Triples submission is provided on the page
+<a href="../job-array-triples/">LLsub Job Array</a>.</p>
+<h3 id="llmapreduce-with-triples">LLMapReduce with Triples</h3>
+<p>A brief introduction to LLMapReduce is provided
+<a href="#llmapreduce">above</a>. To use triples
+mode to launch your LLMapReduce job on Supercloud, use the <code>--np</code> option
+with the triple as its parameter, as follows:</p>
+<blockquote>
+<p><code>--np=[Nodes,NPPN,NTPP]</code></p>
+</blockquote>
+<h3 id="pmatlab-with-triples">pMatlab with Triples</h3>
+<p>A brief introduction to pMatlab is provided
+<a href="#pmatlab">above</a>. To use triples mode to
+launch your pMatlab job on Supercloud, you use the pRUN() function. Its
+usage, in Matlab, is as follows:</p>
+<blockquote>
+<p><code>eval(pRUN('mfile', [Nodes NPPN NTPP], 'grid'))</code></p>
+</blockquote>
+<h3 id="triples-mode-tuning">Triples Mode Tuning</h3>
+<p>Triples mode tuning provides greater efficiency by allowing you to
+better tune your resource requests to your application. This one-time
+tuning process typically takes ~1 hour:</p>
+<ol>
+<li>Instrument your code to print a rate (work/time) giving a sense of
+    the speed from a ~1 minute run.</li>
+<li>Determine best number of threads (<code>NTPPBest</code>) by examining rate
+    from runs with varying numbers of threads:
+    <code>[1,1,1], [1,1,2], [1,1,4]</code>, ...  </li>
+<li>Determine best number of processes per node (<code>NPPNbest</code>) by
+    examining rate from runs with varying numbers of processes:
+    <code>[1,1,NTPPBest], [1,2,NTPPBest], [1,4,NTPPBest]</code>, ...  </li>
+<li>Determine best number of nodes (<code>NodesBest</code>) by examining rate from
+    runs of with varying numbers of nodes:
+    <code>[1,NPPNbest,NTPPBest], [2,NPPNbest,NTPPBest], [4,NPPNbest,NTPPBest]</code>,
+    ...  </li>
+<li>Run your production jobs using <code>[NodesBest,NPPNbest,NTPPBest]</code></li>
+</ol>
+<p>You could tune <code>NPPN</code> first, then <code>NTPP</code>. This would be a better
+approach if you are memory bound. You can find the max <code>NPPN</code> that will
+fit, then keep increasing <code>NTPP</code> until you stop getting more
+performance.</p>
+<p>"Good" <code>NPPN</code> values for Xeon-P8: 1, 2, 4, 8, 16, 24, 32, 48</p>
+<p>"Good" <code>NPPN</code> values for Xeon-G6: 1, 2, 4, 8, 16, 20, 32, 40</p>
+<p>Triples mode tuning results in a ~2x increase efficiency for many
+users.</p>
+<p>Once the best settings have been found, they can be reused as long as
+the code remains roughly similar. Recording the rates from the above
+process can often result in a publishable <a href="http://www.ieee-hpec.org/">IEEE
+HPEC</a> paper. We are happy to work with you to
+guide you through this tuning process.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1090 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://supercloud.mit.edu/getting-started/">
+      
+      
+        <link rel="prev" href="../requesting-account/">
+      
+      
+        <link rel="next" href="../systems-and-software/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>Getting Started - SuperCloud Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SuperCloud Docs" class="md-header__button md-logo" aria-label="SuperCloud Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SuperCloud Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SuperCloud Docs" class="md-nav__button md-logo" aria-label="SuperCloud Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    SuperCloud Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requesting-account/" class="md-nav__link">
+        Requesting an Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Getting Started
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#logging-in-via-ssh" class="md-nav__link">
+    Logging in Via ssh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-hpc-clusters" class="md-nav__link">
+    Shared HPC Clusters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-and-packages" class="md-nav__link">
+    Software and Packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-command-line" class="md-nav__link">
+    Linux Command Line
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transferring-files-to-mit-supercloud" class="md-nav__link">
+    Transferring Files to MIT SuperCloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-your-code" class="md-nav__link">
+    Testing your Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supercloud-downtimes" class="md-nav__link">
+    SuperCloud Downtimes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systems-and-software/" class="md-nav__link">
+        Systems and Software
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acknowledging-us/" class="md-nav__link">
+        Acknowledging Us
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Using the System
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Using the System
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+          Files and Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Files and Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-system/files-and-data/transferring-files/" class="md-nav__link">
+        Transferring Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-system/files-and-data/shared-groups/" class="md-nav__link">
+        Shared Groups
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          Installing Software
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing Software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-system/software-packages/" class="md-nav__link">
+        Software and Package Management
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+          Submitting Jobs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Submitting Jobs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-system/monitoring-system-and-jobs/" class="md-nav__link">
+        Monitoring System and Job Status
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-system/submitting-jobs/submitting-jobs/" class="md-nav__link">
+        Submitting Jobs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-system/submitting-jobs/job-array-triples/" class="md-nav__link">
+        Job Array Triples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+          Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-system/best-practices/filesystem/" class="md-nav__link">
+        Best Practices for using the Filesystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-system/best-practices/gpu-jobs/" class="md-nav__link">
+        Optimizing your GPU Jobs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+          Web Portal
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          Web Portal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-system/web-portal/" class="md-nav__link">
+        Logging In
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-system/databases/" class="md-nav__link">
+        Databases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-system/jupyter-notebooks/" class="md-nav__link">
+        Jupyter Notebooks
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faqs/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-help/" class="md-nav__link">
+        Getting Help
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        Glossary
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#logging-in-via-ssh" class="md-nav__link">
+    Logging in Via ssh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-hpc-clusters" class="md-nav__link">
+    Shared HPC Clusters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-and-packages" class="md-nav__link">
+    Software and Packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-command-line" class="md-nav__link">
+    Linux Command Line
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transferring-files-to-mit-supercloud" class="md-nav__link">
+    Transferring Files to MIT SuperCloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-your-code" class="md-nav__link">
+    Testing your Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supercloud-downtimes" class="md-nav__link">
+    SuperCloud Downtimes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="getting-started">Getting Started</h1>
+<p>This page contains the most common steps for setting up and getting
+started with your SuperCloud account. We provide this page as a
+convenient reference to get started. To learn how to use your SuperCloud
+account, complete the <a href="https://learn.llx.edly.io/course/practical-hpc/">Practical HPC
+course</a>, which contains
+the material below and more. The course will walk you through these
+steps in more detail and often with videos to see how it is done. The
+course is self paced, can be accessed anytime, and is kept up to date.
+More reference material is available throughout site (some of this
+material links to those pages).</p>
+<p>When your account is first created you will have a small startup
+allocation. Once you complete the <a href="https://learn.llx.edly.io/course/practical-hpc/">Practical HPC
+course</a> you can request
+your account be updated to the standard allocation by sending email to
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#101;&#114;&#99;&#108;&#111;&#117;&#100;&#64;&#109;&#105;&#116;&#46;&#101;&#100;&#117;">&#115;&#117;&#112;&#101;&#114;&#99;&#108;&#111;&#117;&#100;&#64;&#109;&#105;&#116;&#46;&#101;&#100;&#117;</a>. Resource allocations are listed on the
+<a href="../systems-and-software/">Systems and Software</a> page.</p>
+<h2 id="logging-in-via-ssh">Logging in Via ssh</h2>
+<p>The first thing you should do when you get a new account is verify that
+you can log in. The primary way to access the MIT SuperCloud system is
+through ssh. Instructions for different operating systems are below.
+Keep in mind that you will only be able to access the system from ssh
+from the machine where you generated your ssh key. You will not be able
+to log in until we have sent you an email stating that we have created
+your account, which will contain your username.</p>
+<p>First, add your ssh key to the web portal. Go
+to <a href="https://txe1-portal.mit.edu/">https://txe1-portal.mit.edu/</a>. If you affiliated with MIT or another
+institution/university select the middle option "MIT
+Touchstone/InCommon Federation" to log in. Select your institution from
+the dropdown (be aware they are spelled out, MIT is listed as
+Massachusetts Institute of Technology, for example), click "Remember my
+choice" box and then the "Select" button. Then log in with your
+institution credentials. Once you are logged in, click on the
+"sshkeys" link and paste your ssh key in the box at the bottom of the
+page and click "Update Keys".</p>
+<p>For instructions on how to generate ssh keys, retrieve your public key,
+and additional troubleshooting tips, watch the videos in the "Account
+Setup and SSH Keys" section in the "Getting Started" module of the
+<a href="https://learn.llx.edly.io/course/practical-hpc/">Practical HPC course</a>,
+or <a href="../requesting-account/#generating-ssh-keys">see this page</a>.</p>
+<p>First open a command line terminal window where you generated your ssh
+keys. Enter the following command, where <code>USERNAME</code> is your username on
+the MIT SuperCloud system:</p>
+<p><code>ssh USERNAME@txe1-login.mit.edu</code></p>
+<p>If you generated your keys using PuTTY, open a PuTTY window. In the box
+labeled "Host Name" enter<code>USERNAME@txe1-login.mit.edu</code>,
+where<code>USERNAME</code>is your username on the MIT SuperCloud system. Keep the
+ssh box checked (this should be default) and Port should be set to 22.
+Click "Open" to start the session. You may also need to indicate your
+private key on the Connection -> SSH -> Auth page.</p>
+<h2 id="shared-hpc-clusters">Shared HPC Clusters</h2>
+<p>The MIT SuperCloud is an HPC-style shared cluster. You are sharing this
+resources with a number of other researchers, staff, and students so it
+is important that you read this page and use the system as intended.</p>
+<p>Being a cluster, there are several machines connected together with a
+network. We refer to these as <strong>nodes</strong>. Most nodes in the cluster are
+referred to as <strong>compute nodes</strong>, this is where the computation is done
+on the system (where you will run your code). When you ssh into the
+system you are on a special purpose node called the <strong>login node</strong>. The
+login node, as its name suggests, is where you log in and is for editing
+code and files, installing packages and software, downloading data, and
+starting jobs to run your code on one of the compute nodes.</p>
+<p>Each job is started using a piece of software called the <strong>scheduler</strong>,
+which you can think of as a resource manager. You let it know what
+resources you need and what you want to run, and the scheduler will find
+those resources and start your job on them. When your job completes
+those resources are relinquished. The scheduler is what ensures that no
+two jobs are using the same resources, so it is very important not to
+run anything unless it is submitted properly through the scheduler.</p>
+<h2 id="software-and-packages">Software and Packages</h2>
+<p>The first thing you may want to do is make sure the system has the
+software and packages you need. We have installed a lot of software and
+packages on the system already, even though it may not be immediately
+obvious that it is there. Review our page on
+<a href="../using-the-system/software-packages/">Software and Package Management</a>, paying particular
+attention to the section on modules and installing packages for the
+language that you use. If you are ever unsure if we have a particular
+software, and you cannot find it, please send us an email and ask before
+you spend a lot of time trying to install it. If we have it, we can
+point you to it, provide advice on how to use it, and if we don't have
+it we can often give pointers on how to install it. Further, if a lot of
+people request the same software, we may consider adding it to the
+system image.</p>
+<h2 id="linux-command-line">Linux Command Line</h2>
+<p>The MIT SuperCloud runs Linux, so much of what you do on the cluster
+involves the Linux command line. That doesn't mean you have to be a
+Linux expert to use the system! However the more you can get comfortable
+with the Linux command line and a handful of basic commands, the easier
+using the system will be. If you are already familiar with Linux, feel
+free to skip this section, or skim as a refresher.</p>
+<p>Most Linux commands deal with <strong>directories</strong> and <strong>files</strong>. A
+<strong>directory</strong>, synonymous to a folder, contains files and other
+directories. The list of directories that lead to a particular directory
+or file is called its <strong>path</strong>. In Linux, directories on a path are
+separated by forward slashes <code>/</code>. It is also important to note that
+everything in Linux is case sensitive, so a file <code>myScript.sh</code> is not
+the same as the file <code>myscript.sh</code>. When you first log in you are in you
+<strong>home directory</strong>. Your home directory is where you can put all the
+code and data you need to run your job. Your home directory is not
+accessible to other users, if you need a space to share files with other
+users, let us know and we can make a shared <strong>group directory</strong> for you.
+The path to your home directory on SuperCloud is
+<code>/home/gridsan/[USERNAME]</code>, where <code>[USERNAME]</code> is your username. The
+character <code>~</code> is also shorthand for your home directory in any Linux
+commands.</p>
+<p>Anytime after you start typing a Linux command you can press the "Tab"
+button your your keyboard. This called tab-complete, and will try to
+autocomplete what you are typing. This is particularly helpful when
+typing out long directory paths and file names. Pressing "Tab" once
+will complete if there is a single completion, pressing it twice will
+list all potential completions. It is a bit difficult to explain in
+text, but you can try it out yourself and watch the short demonstration
+<a href="https://en.wikipedia.org/wiki/Command-line_completion">here</a>.</p>
+<p>Finally, below is a list of Linux Commands. Try them out for yourself at
+the command line.</p>
+<ul>
+<li>Creating, navigating and viewing directories:<ul>
+<li><code>pwd</code>: tells you the full path of the directory you are
+    currently in</li>
+<li><code>mkdir dirname</code>: creates a directory with the name "dirname"</li>
+<li><code>cd dirname</code>: change directory to directory "dirname"<ul>
+<li><code>cd ../</code>: takes you up one level</li>
+</ul>
+</li>
+<li><code>ls</code>: lists the files in the directory<ul>
+<li><code>ls -a</code>: lists all files including hidden files</li>
+<li><code>ls -l</code>: lists files in "long format" including ownership
+    and date of last update</li>
+<li><code>ls -t</code>: lists files by date stamp, most recently updated
+    file first</li>
+<li><code>ls -tr</code>: lists files by dates stamp in reverse order, most
+    recently updated file is listed last (this is useful if you
+    have a lot of files, you want to know which file you changed
+    last and the list of files results in a scrolling window)</li>
+<li><code>ls dirname</code>: lists the files in the directory "dirname"</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Viewing files<ul>
+<li><code>more filename</code>: shows the first part of a file, hitting the
+    space bar allows you to scroll through the rest of the file, q
+    will cause you to exit out of the file.</li>
+<li><code>less filename</code>: allows you to scroll through the file, forward
+    and backward, using the arrow keys.</li>
+<li><code>tail filename</code>: shows the last 10 lines of a file (useful when
+    you are monitoring a logfile or output file to see that the
+    values are correct)<ul>
+<li>t<code>ail &lt;number&gt; filename</code>: show you the last &lt;number>
+    lines of a file.</li>
+<li><code>tail -f filename</code>: shows you new lines as they are written
+    to the end of the file. Press CMD+C or Control+C to exit.
+    This is helpful to monitor the log file of a batch job.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Copying, moving, renaming, and deleting files<ul>
+<li><code>mv filename dirname</code>: moves filename to directory dirname.<ul>
+<li><code>mv filename1 filename2</code>: moves filename1 to filename2, in
+    essence renames the file. The date and time are not changed
+    by the mv command.</li>
+</ul>
+</li>
+<li><code>cp filename dirname</code>: copies to directory dirname.<ul>
+<li><code>cp filename1 filename2</code>: copies filename1 to filename2. The
+    date stamp on filename2 will be the date/time that the file
+    was moved</li>
+<li><code>cp -r dirname1 dirname2</code>: copies directory dirname1 and its
+    contents to dirname2.</li>
+</ul>
+</li>
+<li><code>rm filename</code>: removes (deletes) the file</li>
+</ul>
+</li>
+</ul>
+<h2 id="transferring-files-to-mit-supercloud">Transferring Files to MIT SuperCloud</h2>
+<p>One of the first tasks is to get your code, data, and any other files
+you need into your home directory on the system. If your code is in
+github you can use git commands on the system to clone your repository
+to your home directory. You can also transfer your files to your home
+directory from your computer by using the commands scp or rsync. Read
+the page on <a href="../using-the-system/files-and-data/transferring-files/">Transferring Files</a> to learn
+how to use these commands and transfer what you need to your home
+directory.</p>
+<h2 id="testing-your-code">Testing your Code</h2>
+<p>At this point you may want to do a test-run of your code. You always
+want to start small in your test runs, so you should choose a small
+example that tests the functionality of what you would ultimately like
+to run on the system. If your test code is serial and runs okay on a
+moderate personal laptop or desktop you can request an interactive
+session to run your code in by executing the command:</p>
+<p><code>LLsub -i</code></p>
+<p>After you run this command you will be on a compute node and you can do
+a test-run of your code. This command will allocate one core to your
+job. If your test code is multithreaded or parallel, or uses a lot of
+memory, you should request a full node to be sure you don't impact
+other jobs on the system:</p>
+<p><code>LLsub -i full</code></p>
+<p>These commands by no means represent the full use of the system, and
+most likely won't be the primary way you run your code. In our tutorial
+we go over much more on how to submit jobs and will make sure you have
+the tools you need to get the most out of the MIT SuperCloud.</p>
+<h2 id="supercloud-downtimes">SuperCloud Downtimes</h2>
+<p>Note that SuperCloud has <strong>Monthly Downtimes</strong> which are scheduled for
+the <strong>Third Thursday</strong> of each month. During downtimes the system is not
+available. Downtimes usually last about a day and emails are sent when
+they are complete. We also send out a reminder email a few days before
+each downtime.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+    
+  </body>
+</html>
